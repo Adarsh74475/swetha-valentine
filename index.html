@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Swetha ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts"></div>
+<canvas id="confetti"></canvas>
+
+<!-- PAGE 1 -->
+<div class="container" id="page1">
+  <div class="big-box">
+    <h2>Hi Swetha ❤️</h2>
+    <p>It's me, Adhu</p>
+    <button onclick="goToValentine()">Click Me</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="container hidden" id="page2">
+  <div class="big-box">
+    <h1>Will you be my Valentine? 💘</h1>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">YES 💖</button>
+      <button class="no" id="noBtn">NO 😈</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="container hidden" id="page3">
+  <div class="big-box">
+    <h1>She said YES 😍🎉</h1>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+      <img src="img1.jpg.jpeg" class="active">
+      <img src="img2.jpg.jpeg">
+      <img src="img3.jpg.jpeg">
+    </div>
+
+    <!-- Typing text -->
+    <p id="typedText"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
