@@ -65,9 +65,10 @@ function animateConfetti() {
 
 // ⌨️ Typing animation
 const text =
-`From the moment you came into my life, everything felt right.
-You are my smile, my peace, and my favorite person.
-I promise to choose you, today and always. 💖`;
+`You are the only one who truly believed in me, and I’m so grateful to have you in my life. 
+ I love your smile, the time we spend together, and the peace you bring into my world. You 
+are my favorite person, my safe place, and my happiness.
+I love you so much, Swethammoo. I’m incredibly lucky to have you.❤️🥰`;
 
 let i = 0;
 function startTyping() {
@@ -88,3 +89,10 @@ setInterval(() => {
   slideIndex = (slideIndex + 1) % slides.length;
   slides[slideIndex].classList.add("active");
 }, 2500);
+
+const typedText = document.getElementById("typedText");
+const secretLove = document.getElementById("secretLove");
+
+typedText.addEventListener("mousedown", () => {
+  secretLove.style.opacity = 1;
+});
