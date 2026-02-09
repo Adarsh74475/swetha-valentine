@@ -60,9 +60,13 @@ body {
   cursor: pointer;
 }
 
+/* FIXED BUTTON LAYOUT */
 .buttons {
   margin-top: 40px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 
 .yes {
@@ -74,34 +78,30 @@ body {
 }
 
 .no {
-  position: absolute;
-  left: 160px;
-  top: 0;
   background: white;
   color: #ff2f68;
+  font-size: 18px;
+  padding: 15px 45px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
 }
 
 /* Slideshow */
 .slideshow {
   width: 220px;
   height: 220px;
-
-  position: relative;
-
-  /* ✅ CENTER ALIGN FIX */
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin: 20px auto; /* keeps it centered in the box */
+  margin: 20px auto;
+  position: relative;
 }
 
 .slideshow img {
   width: 100%;
   height: 100%;
-
-  object-fit: cover;   /* ✅ keeps image centered & clean */
-
+  object-fit: cover;
   border-radius: 20px;
   position: absolute;
   opacity: 0;
@@ -112,7 +112,7 @@ body {
   opacity: 1;
 }
 
-/* Hearts */
+/* Floating hearts */
 .hearts span {
   position: absolute;
   bottom: -40px;
@@ -138,24 +138,42 @@ body {
   pointer-events: none;
 }
 
+/* Love Letter */
+.letter-btn {
+  margin-top: 25px;
+  background: white;
+  color: #ff2f68;
+  font-size: 18px;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+.letter-box {
+  max-width: 850px;
+}
+
+.love-letter {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.hidden-love {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
 /* Mobile */
 @media (max-width: 600px) {
   .big-box h1,
   .big-box h2 {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .big-box {
-    min-height: auto;
-    padding: 35px 20px;
-  }
-
-  .big-box h1,
-  .big-box h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .big-box p {
@@ -164,22 +182,16 @@ body {
 
   .yes {
     font-size: 18px;
-    padding: 14px 40px;
+    padding: 14px 38px;
   }
 
   .no {
-    left: 110px;
+    font-size: 16px;
+    padding: 12px 30px;
   }
 
   .slideshow {
     width: 180px;
     height: 180px;
   }
-}
-
-.hidden-love {
-  margin-top: 20px;
-  font-size: 18px;
-  opacity: 0;
-  transition: opacity 0.6s ease;
 }
