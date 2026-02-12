@@ -8,18 +8,23 @@ canvas.height = window.innerHeight;
 
 const page1 = document.getElementById("page1");
 const page2 = document.getElementById("page2");
+const ringPage = document.getElementById("ringPage");
 const page3 = document.getElementById("page3");
 const page4 = document.getElementById("page4");
 
-// Navigation
 function goToValentine() {
   page1.classList.add("hidden");
   page2.classList.remove("hidden");
   music.play();
 }
 
-function sayYes() {
+function goToRing() {
   page2.classList.add("hidden");
+  ringPage.classList.remove("hidden");
+}
+
+function goToSlideshow() {
+  ringPage.classList.add("hidden");
   page3.classList.remove("hidden");
   startConfetti();
   startTyping();
@@ -75,11 +80,10 @@ function animateConfetti() {
   requestAnimationFrame(animateConfetti);
 }
 
-// Typing Animation
+// Typing animation
 const text =
-`"You are the only one who truly believed in me, and I’m so grateful to have you in my life.
- You are my favorite person, I love your smile, the time we spend together, my safe place, and my happiness.
- I love you so much, Swethammoo. ❤️🥰"`;
+`You are my happiness, my peace, my forever.
+I love you more than words Swethammoo ❤️🥰`;
 
 let i = 0;
 function startTyping() {
@@ -102,11 +106,3 @@ setInterval(() => {
   slideIndex = (slideIndex + 1) % slides.length;
   slides[slideIndex].classList.add("active");
 }, 2500);
-
-// Hidden Love
-const typedText = document.getElementById("typedText");
-const secretLove = document.getElementById("secretLove");
-
-typedText.addEventListener("click", () => {
-  secretLove.style.opacity = 1;
-});
